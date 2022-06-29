@@ -8,6 +8,7 @@
 namespace Hasinur\GraphWidget\Api\Controllers;
 
 use Hasinur\GraphWidget\Admin\GraphData;
+use Hasinur\GraphWidget\Data\StaticData;
 use Hasinur\GraphWidget\Interfaces\ApiInterface;
 use WP_REST_Server;
 
@@ -55,6 +56,10 @@ class Graph extends Base implements ApiInterface {
 	 */
 	public function graph_items() {
 		$data = GraphData::get();
+
+		if ( ! $data ) {
+			$data = StaticData::get();
+		}
 
 		return rest_ensure_response( $data );
 	}
