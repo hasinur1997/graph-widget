@@ -45,5 +45,7 @@ class Setup {
         if ( is_admin() ) {
             new Admin\Manager();
         }
+
+        new Api\Manager();
     }
 }
