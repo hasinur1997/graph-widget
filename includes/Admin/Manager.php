@@ -1,4 +1,10 @@
 <?php
+/**
+ * Admin manager to manage all admin related class
+ *
+ * @package Hasinur\GraphWidget
+ */
+
 namespace Hasinur\GraphWidget\Admin;
 
 use Hasinur\GraphWidget\Abstracts\BaseManager;
@@ -8,26 +14,26 @@ use Hasinur\GraphWidget\Abstracts\BaseManager;
  */
 class Manager extends BaseManager {
 
-    /**
-     * Admin manager constructor.
-     * Handles admin initializations.
-     *
-     * @since 1.0.0
-     */
-    public function __construct() {
-        parent::__construct();
-    }
+	/**
+	 * Admin manager constructor.
+	 * Handles admin initializations.
+	 *
+	 * @since 1.0.0
+	 */
+	public function __construct() {
+		parent::__construct();
+	}
 
-    /**
-     * Load classes for the manager
-     *
-     * @return void
-     */
-    protected function load_classmap() {
-        $this->classes = [
-            'admin_asset' => AdminAssets::class,
-            'widget'      => Widget::class,
-        ];
-    }
-    
+	/**
+	 * Load classes for the manager
+	 *
+	 * @return void
+	 */
+	protected function load_classmap() {
+		$this->classes = [
+			'admin_asset' => AdminAssets::class,
+			'widget'      => Widget::class,
+		];
+	}
+
 }

@@ -1,40 +1,46 @@
 <?php
+/**
+ * Base manager abstract class
+ *
+ * @package Hasinur\GraphWidget
+ */
+
 namespace Hasinur\GraphWidget\Abstracts;
 
 /**
  * BaseManager abstract class
  */
 abstract class BaseManager {
-    /**
-     * Store classes
-     *
-     * @var array
-     */
-    protected $classes = [];
+	/**
+	 * Store classes
+	 *
+	 * @var array
+	 */
+	protected $classes = [];
 
-    /**
-     * BaseManager class constructor
-     */
-    public function __construct() {
-        $this->load_classmap();
-        $this->register_classes();
-    }
+	/**
+	 * BaseManager class constructor
+	 */
+	public function __construct() {
+		$this->load_classmap();
+		$this->register_classes();
+	}
 
-    /**
-     * Loads classmap for the manager
-     *
-     * @return void
-     */
-    abstract protected function load_classmap();
+	/**
+	 * Loads classmap for the manager
+	 *
+	 * @return void
+	 */
+	abstract protected function load_classmap();
 
-    /**
-     * Register classes and puts it in the container
-     *
-     * @return void
-     */
-    public function register_classes() {
-        foreach( $this->classes as $key => $class ) {
-            $object = new $class();
-        }
-    }
+	/**
+	 * Register classes and puts it in the container
+	 *
+	 * @return void
+	 */
+	public function register_classes() {
+		foreach ( $this->classes as $class ) {
+			new $class();
+		}
+	}
 }

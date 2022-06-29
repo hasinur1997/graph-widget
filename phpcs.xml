@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<ruleset name="WordPress Coding Standards for Graph Widget">
+    <config name="minimum_supported_wp_version" value="5.4" />
+	<!-- Check for PHP cross-version compatibility. -->
+	<config name="testVersion" value="7.2-"/>
+
+    <file>includes</file>
+    <file>graph-widget.php</file>
+
+    <!-- Show progress and sniff codes in all reports. -->
+    <arg value="ps"/>
+
+    <!-- A path to strip from the front of file paths inside reports. -->
+    <arg name="colors"/>
+    <arg name="extensions" value="php"/>
+
+    <rule ref="WordPress-Core">
+        <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
+        <exclude name="WordPress.PHP.DisallowShortTernary" />
+    </rule>
+
+    <rule ref="WordPress-Docs">
+        <exclude-pattern>tests/*</exclude-pattern>
+    </rule>
+
+    <!-- For PSR-4 autoloading. -->
+	<rule ref="WordPress-Extra">
+		<exclude name="WordPress.Files.FileName" />
+		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
+	</rule>
+
+    <rule ref="WordPress.WP.I18n">
+        <properties>
+            <property name="text_domain" type="array">
+                <element value="graph-widget" />
+            </property>
+        </properties>
+    </rule>
+
+    <rule ref="VariableAnalysis.CodeAnalysis.VariableAnalysis" />
+
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>/lib/*</exclude-pattern>
+</ruleset>

@@ -13,6 +13,8 @@
  * Update URI:        https://github.com/hasinur1997/
  * Text Domain:       graph-widget
  * Domain Path:       /languages
+ *
+ * @package Hasinur\GraphWidget
  */
 
  /*
@@ -50,57 +52,56 @@ require __DIR__ . '/vendor/autoload.php';
  */
 final class GraphWidget {
 
-    /**
-     * Plugin version
-     *
-     * @var string
-     */
-    private $version = '1.0.0';
+	/**
+	 * Plugin version
+	 *
+	 * @var string
+	 */
+	private $version = '1.0.0';
 
-    /**
-     * DashboardWidget Constructor
-     */
-    public function __construct() {
-        // Define constant.
-        $this->define_constants();
+	/**
+	 * DashboardWidget Constructor
+	 */
+	public function __construct() {
+		// Define constant.
+		$this->define_constants();
 
-        // Setup plugin.
-        new \Hasinur\GraphWidget\Setup();
-    }
+		// Setup plugin.
+		new \Hasinur\GraphWidget\Setup();
+	}
 
-    /**
-     * Define plugin constants
-     *
-     * @return void
-     */
-    public function define_constants() {
-        define( 'GRAPH_WIDGET_VERSION', $this->version );
-        define( 'GRAPH_WIDGET_FILE', __FILE__ );
-        define( 'GRAPH_WIDGET_URL', plugins_url( '', GRAPH_WIDGET_FILE ) );
-        define( 'GRAPH_WIDGET_ASSET', GRAPH_WIDGET_URL . '/assets' );
-        define( 'GRAPH_WIDGET_TEXT_DOMAIN_DIR', dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-        define( 'GRAPH_WIDGET_TEXT_INCLUDES', plugins_url( 'includes', GRAPH_WIDGET_FILE ) );
-    }
+	/**
+	 * Define plugin constants
+	 *
+	 * @return void
+	 */
+	public function define_constants() {
+		define( 'GRAPH_WIDGET_VERSION', $this->version );
+		define( 'GRAPH_WIDGET_FILE', __FILE__ );
+		define( 'GRAPH_WIDGET_URL', plugins_url( '', GRAPH_WIDGET_FILE ) );
+		define( 'GRAPH_WIDGET_ASSET', GRAPH_WIDGET_URL . '/assets' );
+		define( 'GRAPH_WIDGET_TEXT_DOMAIN_DIR', dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+		define( 'GRAPH_WIDGET_TEXT_INCLUDES', plugins_url( 'includes', GRAPH_WIDGET_FILE ) );
+	}
 
-    /**
-     * Initializes the GraphWidget class
-     * 
-     * Checks  for an existing  GraphWidget instance 
-     * 
-     * and if it doesn't  find one, creates it.
-     * 
-     *
-     * @return GraphWidget
-     */
-    public static function instance() {
-        static $instance = false;
-       
-        if ( ! $instance ) {
-            $instance = new self();
-        }
+	/**
+	 * Initializes the GraphWidget class
+	 *
+	 * Checks  for an existing  GraphWidget instance
+	 *
+	 * and if it doesn't  find one, creates it.
+	 *
+	 * @return GraphWidget
+	 */
+	public static function instance() {
+		static $instance = false;
 
-        return $instance;
-    }
+		if ( ! $instance ) {
+			$instance = new self();
+		}
+
+		return $instance;
+	}
 }
 
 /**
@@ -109,8 +110,8 @@ final class GraphWidget {
  * @return GraphWidget
  */
 function graph_widget() {
-    return GraphWidget::instance();
+	return GraphWidget::instance();
 }
 
-// Kick Off 
+// Kick off the plugin.
 graph_widget();
