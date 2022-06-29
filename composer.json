@@ -1,0 +1,16 @@
+{
+    "name": "hasinur/dashboard-widget",
+    "description": "A simple plugin for dashboard-widget",
+    "autoload": {
+        "psr-4": {
+            "Hasinur\\GraphWidget\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Hasinur Rahman",
+            "email": "hasinurrahman3@gmail.com"
+        }
+    ],
+    "require": {}
+}
