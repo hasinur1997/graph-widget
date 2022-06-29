@@ -9,7 +9,6 @@ class Widget {
      * Widget class constructor.
      */
     public function __construct() {
-        error_log(print_r("Widget Loaded !", true));
         // Initialize hooks.
         add_action( 'wp_dashboard_setup', [ $this, 'register_dashobard_widget' ] );
     }
@@ -23,7 +22,11 @@ class Widget {
         wp_add_dashboard_widget(
             'graph_widget',
             __( 'Graph Widget', 'graph-widget' ),
-            [ $this, 'widget_content' ]
+            [ $this, 'widget_content' ],
+            null,
+            null,
+            'side',
+            'high'
         );
     }
 
