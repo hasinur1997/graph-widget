@@ -12,7 +12,7 @@ class GraphData {
      *
      * @var string
      */
-    public static $OPTION_KEY = 'graph_widget';
+    public static $OPTION_KEY = 'graph_widget_data';
 
     /**
      * Get graph data
