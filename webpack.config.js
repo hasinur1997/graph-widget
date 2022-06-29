@@ -1,5 +1,7 @@
 const path = require('path');
 
+const ESLintPlugin = require('eslint-webpack-plugin');
+
 const isProductionMode = process.env.NODE_ENV == 'production';
 
 module.exports = {
@@ -29,5 +31,9 @@ module.exports = {
                 ],
             },
         ]
-    }
+    },
+
+    plugins: [
+        new ESLintPlugin()
+    ]
 }

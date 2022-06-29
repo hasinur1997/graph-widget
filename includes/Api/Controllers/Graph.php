@@ -35,7 +35,6 @@ class Graph extends Base implements ApiInterface {
                 [
                     'methods'             => WP_REST_Server::READABLE,
                     'callback'            => [$this, 'graph_items'],
-                    'permission_callback' => [$this, 'admin_permissions_check'],
                     'args'                => [],
                 ],
                 'schema' => [$this, 'get_item_schema'],
