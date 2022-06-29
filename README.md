@@ -1,13 +1,14 @@
 ## WordPress dashboard widget
 
 **Contributors:** Hasinur Rahman
-**Tags**: API, Data, graph, widget
-**Requires at least:** 4.4
-**Tested up to:** 6.0
-**Requires PHP:** 7.2
-**Stable tag:** trunk
-**License:** GPLv2 or later
-**License URI:** http://www.gnu.org/licenses/gpl-2.0.html
+**Tags**: API, Data, graph, widget  
+**Requires at least:** 4.4 
+**Tested up to:** 6.0 
+**Requires PHP:** 7.2 
+**Stable tag:** trunk 
+**License:** GPLv2 or later 
+**License URI:** http://www.gnu.org/licenses/gpl-2.0.html 
+
 
 == Description ==
 A simple plugin for fetching data from api and display using graph.
@@ -24,17 +25,17 @@ Created by [hasinur1997](https://github.com/hasinur1997)
  `run npm install` and `composer install`
 - Activate the plugin
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions
 No FAQ
 
-== Screenshots ==
+## Screenshots
 No Screenshots
 
-== Changelog ==
+## Changelog
 
 v1.0.0 -> June 29, 2022
 --------------------------------------------
 - [tweak] Initial version released
 
-== Upgrade Notice ==
+## Upgrade Notice
 No upgrade notice
