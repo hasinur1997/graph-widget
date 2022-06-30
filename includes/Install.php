@@ -49,6 +49,6 @@ class Install {
 	 * @return void
 	 */
 	private function setup_graph_data() {
-		GraphData::update( 'graph_widget_data', StaticData::get() );
+		GraphData::update( StaticData::get() );
 	}
 }

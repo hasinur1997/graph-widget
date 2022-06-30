@@ -24,6 +24,6 @@ class Deactivate {
 	 * @return void
 	 */
 	public function deactivate() {
-		// @todo codes to execute upon deactivation.
+		delete_option( 'graph_widget_data' );
 	}
 }
