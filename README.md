@@ -21,10 +21,10 @@ Created by [hasinur1997](https://github.com/hasinur1997)
 ## Installation
 - Clone the repository inside `/wp-content/plugins/`
 - CD into folder `cd graph-widget`
- `run npm install` 
- `run composer install`
- `npm run start`
- 
+- `npm install` 
+- `composer install`
+- `npm run start`
+
 - Activate the plugin
 
 ## Frequently Asked Questions
